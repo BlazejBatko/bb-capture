@@ -1,14 +1,13 @@
-import "./style/_App.scss";
+import GlobalStyle from "./components/GlobalStyle";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
-  var audio = new Audio();
-  audio.play();
+  
   return (
     <div className="App">
-      
+      <GlobalStyle />
+      <AboutUs />
     </div>
-   
-
   );
 }
 
