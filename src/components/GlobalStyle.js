@@ -50,11 +50,7 @@ span{
 a{
     font-size: 1.1rem;
 }
-img{
-    height: 100vh;
-    padding: 0 !important;
-    margin: 0 !important;
-}
+
 `;
 
 export default GlobalStyle;

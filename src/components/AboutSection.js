@@ -8,17 +8,17 @@ const AboutSection = () => {
     <StyledAbout>
       <StyledDescription>
         <div className="title">
-          <div className="hide">
+          <Hide>
             <h2>We work to make</h2>
-          </div>
-          <div className="hide">
+          </Hide>
+          <Hide>
             <h2>
               your <span>dreams</span> come
             </h2>
-          </div>
-          <div className="hide">
+          </Hide>
+          <Hide>
             <h2>true.</h2>
-          </div>
+          </Hide>
         </div>
         <p>
           Contact us for any photography or videography ideas that you have.
@@ -34,9 +34,22 @@ const AboutSection = () => {
 
 //Styled Components
 const StyledImage = styled.div`
+  flex: 1;
   margin-right: -5rem;
-  box-shadow: -0.2rem -1rem 1rem 0.2rem #0C0B10;
+  box-shadow: -0.2rem -1rem 1rem 0.2rem #0c0b10;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+  }
 `;
+
+const Hide = styled.div`
+  overflow: hidden;
+`;
+
 const StyledAbout = styled.div`
   min-height: 90vh;
   display: flex;
@@ -47,11 +60,11 @@ const StyledAbout = styled.div`
 `;
 
 const StyledDescription = styled.div`
-flex:1;
-padding-right: 5rem;
-h2{
-    font-weight: lighter
-}
-`
+  flex: 1;
+  padding-right: 5rem;
+  h2 {
+    font-weight: lighter;
+  }
+`;
 
 export default AboutSection;
