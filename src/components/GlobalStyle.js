@@ -6,7 +6,9 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box
 }
 body{
-    background: #1b1b1b
+    background: #1b1b1b;
+    font-family: 'Inter', sans-serif;
+    
 }
 button{
     font-weight: bold;
@@ -25,6 +27,7 @@ button{
 h2{
     font-weight: lighter;
     font-size: 4rem;
+    
 }
 h3{
     padding: 3rem 0rem;
@@ -33,7 +36,8 @@ h3{
 }
 h4{
     font-weight: bold;
-    color:#23d997;
+    color:#C5501A;
+    font-size: 2rem;
 }
 p{
     padding: 3rem 0rem;
@@ -42,6 +46,7 @@ p{
     line-height: 150%
 }
 span{
+    padding: 2rem 0rem;
     font-weight: bold;
     background: linear-gradient(90deg, rgba(197,80,26,1) 40%, rgba(49,34,27,1) 100%, rgba(27,27,27,1) 100%);
     -webkit-background-clip: text;
