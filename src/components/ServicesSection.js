@@ -2,6 +2,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import React from "react";
 import Koi_fish2 from "../img/Koi_fish2.jpg";
+import { UseScroll } from "./useScroll";
+import { scrollReveal } from "../animation";
+
+//TEST
 
 //Import icons
 import {
@@ -21,8 +25,15 @@ import {
 } from "../styles";
 
 const ServicesSection = () => {
+  const [element, controls] = UseScroll();
+
   return (
-    <StyledServices>
+    <StyledServices
+      variants={scrollReveal}
+      animate={controls}
+      initial="hidden"
+      ref={element}
+    >
       <StyledDescription>
         <h2>
           High <span>quality</span> services
@@ -82,6 +93,9 @@ const StyledServices = styled(StyledAbout)`
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 1300px) {
+    justify-content: center;
+  }
 `;
 
 const Card = styled.div`

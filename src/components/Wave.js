@@ -11,6 +11,7 @@ const Wave = () => {
     >
       <g clip-path="url(#clip0_116_71)">
         <motion.path
+          className="line"
           initial={{ pathLength: 0, pathOffset: 1 }}
           animate={{ pathLength: 1, pathOffset: 0 }}
           transition={{ duration: 2 }}
@@ -37,7 +38,15 @@ const Wave = () => {
 const WaveSvg = styled.svg`
   position: absolute;
   left: 0;
-  z-index: 1;
+
+  z-index: -1;
+  @media (max-width: 1300px) {
+    top: 50%;
+
+    .line {
+      stroke-width: 1rem;
+    }
+  }
 `;
 
 export default Wave;

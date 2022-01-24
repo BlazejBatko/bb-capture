@@ -1,6 +1,7 @@
 import react from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import ScrollTop from "../components/ScrollTop";
 
 //Images
 import athlete from "../img/athlete-small.png";
@@ -16,8 +17,13 @@ import {
   slider,
   sliderContainer,
 } from "../animation";
+import { UseScroll } from "../components/useScroll";
+import { SliderAnimFn } from "../animation";
 
 const OurWork = () => {
+  const [element, controls] = UseScroll();
+  const [element2, controls2] = UseScroll();
+
   return (
     <div>
       <Work
@@ -42,16 +48,26 @@ const OurWork = () => {
             </Hide>
           </Link>
         </Movie>
-        <Movie>
+        <Movie
+          ref={element}
+          variants={fade}
+          animate={controls}
+          initial="hidden"
+        >
           <h2>The Racer</h2>
-          <div className="line"></div>
+          <motion.div variants={lineAnim} className="line"></motion.div>
           <Link to="the-racer">
             <img src={theracer} alt="theracer" />
           </Link>
         </Movie>
-        <Movie>
+        <Movie
+          ref={element2}
+          variants={fade}
+          animate={controls2}
+          initial="hidden"
+        >
           <h2>Good times</h2>
-          <div className="line"></div>
+          <motion.div variants={lineAnim} className="line"></motion.div>
           <Link to="good-times">
             <img className="goodtimes" src={goodtimes} alt="goodtimes" />
           </Link>
@@ -69,8 +85,12 @@ const Work = styled(motion.div)`
   h2 {
     padding: 1rem 0rem;
   }
+
+  @media (max-width: 1300px) {
+    padding: 2rem 2rem;
+  }
 `;
-const Movie = styled.div`
+const Movie = styled(motion.div)`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;
@@ -94,7 +114,7 @@ const Hide = styled.div`
 
 //Frame animation
 
-const Frame1 = styled(motion.div)`
+export const Frame1 = styled(motion.div)`
   position: fixed;
   left: 0;
   top: 10%;
@@ -104,13 +124,13 @@ const Frame1 = styled(motion.div)`
   z-index: 2;
 `;
 
-const Frame2 = styled(Frame1)`
+ export const Frame2 = styled(Frame1)`
   background: #ff8efb;
 `;
-const Frame3 = styled(Frame1)`
+export const Frame3 = styled(Frame1)`
   background: #8ed2ff;
 `;
-const Frame4 = styled(Frame1)`
+export const Frame4 = styled(Frame1)`
   background: #8effa0;
 `;
 

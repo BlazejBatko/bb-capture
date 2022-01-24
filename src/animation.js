@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { Frame1, Frame2, Frame3, Frame4 } from "./pages/OurWork";
+
 export const pageAnimation = {
   hidden: {
     opacity: 0,
@@ -25,7 +28,19 @@ export const titleAnimation = {
   hidden: { y: 200 },
   show: {
     y: 0,
-    transition: { duration: 0.75, ease: "easeOut" },
+    transition: { duration: 0.3, ease: "easeOut" },
+  },
+};
+
+export const titleAnimation2 = {
+  hidden: { y: 200 },
+  show: {
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: "easeOut",
+      staggerChildren: 0.25,
+    },
   },
 };
 
@@ -57,11 +72,22 @@ export const slider = {
     skew: "0deg",
     transition: { ease: "easeOut", duration: 1 },
   },
-
-  
 };
 
 export const sliderContainer = {
-  hidden: {opacity: 1},
-  show: {opacity: 1, transition: {staggerChildren: 0.1, ease: 'easeOut'}},
-}
+  hidden: { opacity: 1 },
+  show: { opacity: 1, transition: { staggerChildren: 0.1, ease: "easeOut" } },
+};
+
+export const scrollReveal = {
+  hidden: { opacity: 0, scale: 1.1, transition: { duration: 0.5 } },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+export const SliderAnimFn = () => {};

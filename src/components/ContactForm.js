@@ -29,12 +29,12 @@ const Form = () => {
       "user_eagDPrYS1cQbCTwORGOW2"
     )
       .then((response) => {
-        // Swal.fire("SUCCESS!", "Your email was sent to us", "success");
+        Swal.fire("SUCCESS!", "Your email was sent to us", "success");
         console.log("success");
       })
       .catch((err) => {
         console.log("FAILED...", err);
-        // Swal.fire("ERROR", "The message could not be sent :(", "error");
+        Swal.fire("ERROR", "The message could not be sent :(", "error");
       });
   };
 
@@ -54,7 +54,7 @@ const Form = () => {
           <StyledH2 variants={titleAnimation2}>Write to us</StyledH2>
         </Hide>
       </MotionDiv>
-      <StyledForm onSubmit={onSubmit} >
+      <StyledForm onSubmit={onSubmit} autocomplete="off">
         <Hide>
           <StyledInput
             variants={titleAnimation2}
@@ -90,10 +90,9 @@ const Form = () => {
         </Hide>
         <br></br>
         <Hide>
-          <motion.button variants={titleAnimation2} type="submit">
+          <motion.button className="Sub-button" variants={titleAnimation2} type="submit">
             Submit
           </motion.button>
-          <button type="submit"> Submit2</button>
         </Hide>
       </StyledForm>
     </StyledDiv>
@@ -110,15 +109,15 @@ const StyledDiv = styled(motion.div)`
   width: 50%;
 
   @media (max-width: 1300px) {
-    padding: 2rem;
+    padding: 2rem ;
     margin: 0;
-    width: 75%;
+    width: 100%;
   }
 `;
 
 const MotionDiv = styled(motion.div)``;
 
-const StyledForm = styled(motion.div)`
+const StyledForm = styled(motion.form)`
   width: 100%;
   height: 30vh;
   display: block;
@@ -132,9 +131,23 @@ const StyledForm = styled(motion.div)`
   .Message {
     height: 15vh;
   }
+
+  .Sub-button{
+    width: 100%;
+    margin-top: 1.5em;
+
+    @media (max-width: 550px) {
+      width: 50%;
+      text-align: start;
+    }
+  }
 `;
 
 const StyledInput = styled(motion.input)`
+  textarea:focus,
+  input:focus {
+    outline: none;
+  }
   border: none;
   color: white;
   text-align: start;
@@ -145,10 +158,6 @@ const StyledInput = styled(motion.input)`
   padding: 2rem 2rem;
   display: block;
   margin-top: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 1rem;
 
-  .name_field {
-    background: white;
-  }
+  border-radius: 1rem;
 `;

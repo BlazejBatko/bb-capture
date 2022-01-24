@@ -56,7 +56,15 @@ const ImageDisplay = styled.div`
   img {
     width: 100%;
     height: 100vh;
-    object-position: cover;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  @media (max-width: 1300px) {
+    display: block;
+    margin: 2rem 2rem;
+    img {
+      object-position: right;
+    }
   }
 `;
 const StyledDetails = styled(motion.div)`
@@ -64,7 +72,7 @@ const StyledDetails = styled(motion.div)`
 `;
 const StyledHeadline = styled.div`
   min-height: 90vh;
-  padding-top: 20vh;
+  padding-top: 20rem;
   position: relative;
   h2 {
     position: absolute;
@@ -78,25 +86,58 @@ const StyledHeadline = styled.div`
     object-fit: cover;
     object-position: 100% 30%;
   }
+
+  @media (max-width: 1300px) {
+    display: block;
+    margin: 2rem 2rem;
+    img {
+      object-position: left;
+      padding: 3rem 0rem;
+    }
+    h2{
+      display: block;
+      padding: 2rem;
+      align-items: center;
+    }
+  }
 `;
 
 const StyledDescription = styled.div`
-  padding: 10rem 10rem;
-  margin: 0rem 5rem;
+  padding: 5rem 20rem;
   font-size: 2rem;
   line-height: 3rem;
   letter-spacing: 0.07em;
   display: flex;
   align-items: flex-end;
-  width: 50%;
+
+  @media (max-width: 1300px) {
+    display: block;
+    margin: 2rem 2rem;
+    padding: 10rem 2rem;
+    padding-top: 15rem;
+  }
 `;
 
 const StyledAwards = styled.div`
   min-height: 80vh;
   display: flex;
-  margin: 5rem 10rem;
+  margin: 1rem 10rem;
   align-items: center;
   justify-content: space-around;
+
+  @media (max-width: 1500px) {
+    display: block;
+    margin: 2rem 2rem;
+    padding: 2rem 0rem;
+
+    p{
+      padding: 2rem 0rem;
+
+    }
+    h3{
+      padding: 2rem 0rem;
+    }
+  }
 `;
 
 const StyledAward = styled.div`
@@ -113,6 +154,18 @@ const StyledAward = styled.div`
   p {
     padding-bottom: 5rem;
   }
+  @media (max-width: 1300px) {
+    padding: 2rem;
+p{
+  padding-bottom: rem;
+}
+h3{
+  padding-top: 15rem;
+  
+}
+
+  }
+
 `;
 
 //Award Component

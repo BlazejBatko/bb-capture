@@ -26,6 +26,9 @@ const Nav = () => {
 };
 
 const StyledNav = styled.nav`
+  position: sticky;
+  top: 0;
+  z-index: 3;
   min-height: 10vh;
   display: flex;
   margin: auto;
@@ -49,6 +52,21 @@ const StyledNav = styled.nav`
   li {
     padding-left: 10rem;
     /* position: relative; */
+  }
+  @media (max-width: 1300px) {
+    flex-direction: column;
+    padding: 2rem 0rem;
+    #logo{
+      padding: rem;
+    }
+    ul {
+      padding: 2rem;
+      justify-content: space-around;
+      width: 100%;
+      li {
+        padding: 0;
+      }
+    }
   }
 `;
 
