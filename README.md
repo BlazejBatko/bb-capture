@@ -1,5 +1,6 @@
 # Movie studio portfolio 
 
+https://user-images.githubusercontent.com/61236659/151026642-a4ebae14-83c3-479d-b4a3-992f2697a32f.mp4
 
 ## live preview
 https://bb-portfolio-anim.netlify.app
