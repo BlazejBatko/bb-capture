@@ -12,7 +12,7 @@ export const pageAnimation = {
     transition: {
       duration: 0.5,
       when: "beforeChildren",
-      staggerChildren: 0.25,
+      staggerChildren: 0.15,
     },
   },
   exit: {
@@ -56,7 +56,7 @@ export const photoAnim = {
     opacity: 1,
     transition: {
       ease: "easeOut",
-      duration: 0.75,
+      duration: 1,
     },
   },
 };

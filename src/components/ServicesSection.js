@@ -73,9 +73,7 @@ const ServicesSection = () => {
           </Card>
         </Cards>
       </StyledDescription>
-      <StyledImage>
-        <img src={Koi_fish2} alt="Koi fish"></img>
-      </StyledImage>
+     
     </StyledServices>
   );
 };

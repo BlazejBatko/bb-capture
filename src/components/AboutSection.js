@@ -40,8 +40,8 @@ const AboutSection = () => {
         <motion.img
           variants={photoAnim}
           // Jesli nie chcemy zeby stagger wplywal na ten komponent wystarczy dodac initial i animate
-          // initial="hidden"
-          // animate="show"
+          initial="hidden"
+          animate="show"
           src={Koi_fish}
           alt="Koi fish"
         ></motion.img>

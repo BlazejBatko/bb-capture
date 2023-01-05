@@ -31,7 +31,7 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<AboutUs />} />
           <Route path="/work" element={<OurWork />}></Route>
-          {/* :id oznacza ze bez wzgledu na rout po / bedziemy przenoszeni na MovieDetail. */}
+          {/* :id oznacza ze bez wzgledu na route po / bedziemy przenoszeni na MovieDetail. */}
           <Route path="/work/:id" element={<MovieDetail />} />
           <Route path="/contact" element={<ContactUs />} />
         </Routes>
